@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>João Pedro Gomide · Dados & Python</title>
+<meta name="description" content="Portfólio de João Pedro Gomide: análise de dados, Power BI, SQL e Python.">
+<meta name="theme-color" content="#070B1A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070B1A'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='28' text-anchor='middle' fill='%232F6BFF'%3EJ%3Ctspan fill='%23FFD23F'%3EG%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a href="#inicio" class="nav-logo" aria-label="Início">J<span>G</span></a>
+  <nav class="nav-links" id="nav-links">
+    <a href="#sobre" data-i18n="nav.about">Sobre</a>
+    <a href="#habilidades" data-i18n="nav.skills">Habilidades</a>
+    <a href="#dados" data-i18n="nav.data">Dados</a>
+    <a href="#laboratorio" data-i18n="nav.lab">Laboratório</a>
+    <a href="#projetos" data-i18n="nav.projects">Projetos</a>
+    <a href="#experiencia" data-i18n="nav.exp">Experiência</a>
+    <a href="#contato" data-i18n="nav.contact">Contato</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="lang-btn" id="lang-btn" type="button" aria-label="Mudar idioma / Switch language"><span data-lang="pt">PT</span><span data-lang="en">EN</span></button>
+    <button class="menu-btn" id="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="hero-inner wrap">
+    <p class="eyebrow hero-eyebrow" data-i18n="hero.hi">Olá, eu sou</p>
+    <h1 class="hero-title"><span class="line">João Pedro</span><span class="line accent">Gomide</span></h1>
+    <p class="hero-typed"><span class="mono">&gt;</span> <span id="typed">Analista de Dados</span><span class="caret" aria-hidden="true"></span></p>
+    <p class="hero-lead" data-i18n="hero.lead">Transformo dados em decisões e código em soluções.</p>
+    <div class="hero-cta">
+      <a href="#dados" class="btn btn-primary magnetic" data-i18n="hero.cta1">Ver projetos</a>
+      <a href="#contato" class="btn btn-ghost magnetic" data-i18n="hero.cta2">Contato</a>
+    </div>
+  </div>
+  <a href="#sobre" class="scroll-hint" aria-label="Rolar"><span></span></a>
+</section>
+
+<!-- SOBRE -->
+<section class="section" id="sobre">
+  <div class="wrap about">
+    <div class="about-text reveal">
+      <p class="eyebrow" data-i18n="about.eyebrow">01 · Sobre</p>
+      <h2 class="h2" data-i18n="about.title">Dados primeiro, <em>código</em> sempre.</h2>
+      <p data-i18n="about.p1">Estudo Sistemas de Informação na <strong>Universidade Federal de Goiás</strong> e cuido da área de dados do <strong>Grupo LEMA</strong>: dashboards em Power BI, planilhas, tráfego pago e automações.</p>
+      <p data-i18n="about.p2">Fui estagiário de TI na <strong>Secretaria de Indústria e Comércio de Goiás</strong> (out/2024 – 2026), onde implantei mais de 200 máquinas, trabalhei com APIs no Postman e fiz QA com testes automatizados. Falo inglês fluente, com certificado Cambridge.</p>
+      <a class="btn btn-ghost btn-sm magnetic" href="assets/curriculo-joao-pedro-gomide.pdf" download data-i18n="about.cv">Baixar currículo</a>
+    </div>
+    <div class="about-side reveal">
+      <div class="avatar" aria-hidden="true"><span>J</span><span>G</span></div>
+      <div class="stats">
+        <div class="stat"><span class="stat-num" data-count="200" data-suffix="+">0</span><span class="stat-label" data-i18n="about.s1">máquinas implantadas</span></div>
+        <div class="stat"><span class="stat-num" data-count="9">0</span><span class="stat-label" data-i18n="about.s2">projetos neste portfólio</span></div>
+        <div class="stat"><span class="stat-num" data-count="2">0</span><span class="stat-label" data-i18n="about.s3">idiomas</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HABILIDADES -->
+<section class="section" id="habilidades">
+  <div class="wrap">
+    <p class="eyebrow reveal" data-i18n="skills.eyebrow">02 · Habilidades</p>
+    <h2 class="h2 reveal" data-i18n="skills.title">Ferramentas do dia a dia</h2>
+    <div class="skills">
+      <div class="skill-group reveal tilt">
+        <h3><span class="dot dot-y"></span><span data-i18n="skills.g1">Dados</span></h3>
+        <ul class="chips"><li>Power BI</li><li>DAX</li><li>SQL</li><li data-i18n="skills.excel">Excel avançado</li><li>pandas</li><li>ETL</li><li>SQLite</li><li data-i18n="skills.viz">Visualização de dados</li></ul>
+      </div>
+      <div class="skill-group reveal tilt">
+        <h3><span class="dot dot-b"></span><span data-i18n="skills.g2">Programação</span></h3>
+        <ul class="chips"><li>Python</li><li>C</li><li data-i18n="skills.ruby">Ruby (iniciante)</li><li>HTML / CSS / JS</li><li>Google Apps Script</li><li>OpenCV</li><li>MediaPipe</li><li>Tkinter</li></ul>
+      </div>
+      <div class="skill-group reveal tilt">
+        <h3><span class="dot dot-w"></span><span data-i18n="skills.g3">Ferramentas & práticas</span></h3>
+        <ul class="chips"><li>Postman</li><li>JSON / XML</li><li data-i18n="skills.qa">QA e testes automatizados</li><li data-i18n="skills.assets">Gestão de ativos de TI</li><li>Figma</li><li data-i18n="skills.ads">Tráfego pago</li><li data-i18n="skills.en">Inglês fluente (Cambridge)</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DADOS -->
+<section class="section" id="dados">
+  <div class="wrap">
+    <p class="eyebrow reveal" data-i18n="data.eyebrow">03 · Projetos de dados</p>
+    <h2 class="h2 reveal" data-i18n="data.title">Do dado bruto à decisão</h2>
+
+    <article class="feature reveal">
+      <div class="feature-media">
+        <div class="hotspots" id="lema-hotspots">
+          <img src="assets/lema-dashboard.png" alt="Dashboard financeiro do Grupo LEMA no Power BI, com valores borrados" loading="lazy" width="1445" height="800">
+          <button class="hotspot" style="left:21%;top:21%" type="button"><span>1</span><em data-i18n="lema.h1">Filtros de mês, dia, ano e trimestre, que atualizam todos os visuais.</em></button>
+          <button class="hotspot" style="left:24%;top:40%" type="button"><span>2</span><em data-i18n="lema.h2">Faturamento total e recebimentos via PIX por ano.</em></button>
+          <button class="hotspot" style="left:52%;top:19%" type="button"><span>3</span><em data-i18n="lema.h3">Gastos por categoria: mão de obra, diversos e cada unidade.</em></button>
+          <button class="hotspot" style="left:80%;top:27%" type="button"><span>4</span><em data-i18n="lema.h4">KPIs: soma total, gasto total e média de faturamento.</em></button>
+          <button class="hotspot" style="left:80%;top:70%" type="button"><span>5</span><em data-i18n="lema.h5">Metas mensais com semáforo: batida, próxima da meta ou não batida.</em></button>
+          <button class="hotspot" style="left:12%;top:86%" type="button"><span>6</span><em data-i18n="lema.h6">Recebimentos por forma de pagamento: PIX, boleto, cartão, dinheiro e cheque.</em></button>
+        </div>
+        <p class="media-note" data-i18n="lema.note">Valores borrados para preservar os dados da empresa. Toque ou passe o mouse nos números.</p>
+      </div>
+      <div class="feature-body">
+        <span class="tag tag-y">Power BI · DAX · Excel</span>
+        <h3 class="h3" data-i18n="lema.title">Dashboard financeiro · Grupo LEMA</h3>
+        <p data-i18n="lema.desc">Centralizei a análise de dados da empresa num único painel. Antes espalhadas em planilhas, as informações de faturamento, gastos e metas passaram a ficar num lugar só, e as decisões ficaram mais fáceis.</p>
+        <button class="btn btn-primary btn-sm magnetic" type="button" data-modal="m-lema" data-i18n="ui.details">Ver detalhes</button>
+      </div>
+    </article>
+
+    <div class="cards">
+      <article class="card reveal tilt">
+        <div class="card-visual etl" aria-hidden="true">
+          <div class="etl-node"><b>E</b><small>API</small></div>
+          <div class="etl-link"></div>
+          <div class="etl-node"><b>T</b><small>pandas</small></div>
+          <div class="etl-link"></div>
+          <div class="etl-node"><b>L</b><small>SQLite</small></div>
+        </div>
+        <span class="tag">Python · pandas · SQL</span>
+        <h3 class="h3" data-i18n="etl.title">Pipeline ETL de clima</h3>
+        <p data-i18n="etl.desc">Busca a previsão de 5 capitais na API Open-Meteo, limpa e transforma com pandas, grava em SQLite e confere o resultado com SQL.</p>
+        <button class="link-btn" type="button" data-modal="m-etl" data-i18n="ui.more">Ver mais →</button>
+      </article>
+
+      <article class="card reveal tilt">
+        <div class="card-visual" aria-hidden="true">
+          <svg class="payback" viewBox="0 0 300 130" preserveAspectRatio="none">
+            <line x1="0" y1="70" x2="300" y2="70" class="pb-zero"/>
+            <path class="pb-area" d="M0 118 C60 112 110 96 160 70 S250 22 300 12 L300 130 L0 130 Z"/>
+            <path class="pb-line draw" d="M0 118 C60 112 110 96 160 70 S250 22 300 12"/>
+            <circle cx="160" cy="70" r="6" class="pb-dot"/>
+          </svg>
+          <span class="pb-label" data-i18n="eletro.label">payback</span>
+        </div>
+        <span class="tag">Python · Excel · Power BI</span>
+        <h3 class="h3" data-i18n="eletro.title">Viabilidade de um eletroposto</h3>
+        <p data-i18n="eletro.desc">Análise das recargas de um eletroposto: médias diárias, projeção mensal, custo de energia e tempo de retorno do investimento.</p>
+        <button class="link-btn" type="button" data-modal="m-eletro" data-i18n="ui.more">Ver mais →</button>
+      </article>
+
+      <article class="card card-muted reveal tilt">
+        <div class="card-visual lock" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="40" height="40"><path d="M6 10V8a6 6 0 1 1 12 0v2h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V11a1 1 0 0 1 1-1h1Zm2 0h8V8a4 4 0 1 0-8 0v2Z" fill="currentColor"/></svg>
+        </div>
+        <span class="tag" data-i18n="gov.tag">Governo de Goiás</span>
+        <h3 class="h3" data-i18n="gov.title">Painel de risco climático · Goiás Resiliente</h3>
+        <p data-i18n="gov.desc">Painel de dados desenvolvido para o governo do estado. Por ser um projeto público, os detalhes não são exibidos aqui.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- LABORATORIO -->
+<section class="section" id="laboratorio">
+  <div class="wrap">
+    <p class="eyebrow reveal" data-i18n="lab.eyebrow">04 · Laboratório</p>
+    <h2 class="h2 reveal" data-i18n="lab.title">Rode os projetos aqui mesmo</h2>
+    <p class="section-lead reveal" data-i18n="lab.lead">Dois projetos em Python recriados em JavaScript para rodar no navegador.</p>
+
+    <!-- AG F6 -->
+    <article class="lab reveal" id="ag">
+      <header class="lab-head">
+        <div>
+          <span class="tag tag-y" data-i18n="ag.tag">Inteligência Computacional (IC) · UFG</span>
+          <h3 class="h3" data-i18n="ag.title">Algoritmo genético · Função F6</h3>
+          <p data-i18n="ag.desc">A população de 100 indivíduos começa espalhada. A cada geração, seleção, cruzamento e mutação empurram os pontos para o máximo global da F6, no centro do mapa.</p>
+        </div>
+        <button class="link-btn" type="button" data-modal="m-ag" data-i18n="ag.how">Como funciona →</button>
+      </header>
+
+      <div class="ag-grid">
+        <form class="ag-controls" id="ag-form" onsubmit="return false">
+          <label><span data-i18n="ag.pop">População</span> <output id="o-pop">100</output>
+            <input type="range" id="i-pop" min="10" max="300" step="10" value="100"></label>
+          <label><span data-i18n="ag.gens">Gerações</span> <output id="o-gen">40</output>
+            <input type="range" id="i-gen" min="10" max="400" step="10" value="40"></label>
+          <label><span data-i18n="ag.cross">Taxa de cruzamento</span> <output id="o-cross">0.65</output>
+            <input type="range" id="i-cross" min="0" max="1" step="0.01" value="0.65"></label>
+          <label><span data-i18n="ag.mut">Taxa de mutação</span> <output id="o-mut">0.008</output>
+            <input type="range" id="i-mut" min="0" max="0.05" step="0.001" value="0.008"></label>
+          <label class="check"><input type="checkbox" id="i-seed" checked> <span data-i18n="ag.seed">Semente 42 (mesmo resultado da apresentação)</span></label>
+          <div class="ag-buttons">
+            <button class="btn btn-primary btn-sm" type="button" id="ag-run" data-i18n="ag.run">Executar</button>
+            <button class="btn btn-ghost btn-sm" type="button" id="ag-pause" disabled>Pausar</button>
+            <button class="btn btn-ghost btn-sm" type="button" id="ag-reset" data-i18n="ag.reset">Resetar</button>
+          </div>
+          <dl class="ag-result">
+            <div><dt data-i18n="ag.gen">Geração</dt><dd id="r-gen">–</dd></div>
+            <div><dt data-i18n="ag.best">Melhor F6</dt><dd id="r-best">–</dd></div>
+            <div><dt>x, y</dt><dd id="r-xy">–</dd></div>
+          </dl>
+          <p class="hint" data-i18n="ag.max">Máximo teórico: F6 = 1,0 em (0, 0).</p>
+        </form>
+
+        <div class="ag-viz">
+          <figure class="viz-box">
+            <figcaption><span data-i18n="ag.map">Mapa da função F6</span> <button class="chip-btn" type="button" id="ag-zoom" data-i18n="ag.zoom">Zoom no centro</button></figcaption>
+            <canvas id="ag-map" width="360" height="360" aria-label="Mapa de calor da função F6 com a população"></canvas>
+            <div class="legend"><span data-i18n="ag.low">baixa aptidão</span><i></i><span data-i18n="ag.high">alta</span></div>
+          </figure>
+          <figure class="viz-box">
+            <figcaption data-i18n="ag.conv">Melhor aptidão por geração</figcaption>
+            <canvas id="ag-chart" width="420" height="260" aria-label="Gráfico de convergência"></canvas>
+          </figure>
+        </div>
+      </div>
+      <pre class="terminal" id="ag-log" aria-live="off"><span class="muted">$ python ag_f6.py</span></pre>
+    </article>
+
+    <!-- GESTOS -->
+    <article class="lab reveal" id="gestos">
+      <header class="lab-head">
+        <div>
+          <span class="tag">OpenCV · MediaPipe · Python</span>
+          <h3 class="h3" data-i18n="g.title">Controle de volume por gestos</h3>
+          <p data-i18n="g.desc">Um menu controlado só com a mão: a quantidade de dedos escolhe a opção, o polegar confirma ou cancela e, no modo volume, de 1 a 5 dedos definem o volume de 0% a 100%.</p>
+        </div>
+        <button class="link-btn" type="button" data-modal="m-gestos" data-i18n="ag.how">Como funciona →</button>
+      </header>
+
+      <div class="g-grid">
+        <div class="g-stage">
+          <canvas id="g-demo" width="480" height="360" aria-label="Animação ilustrativa da mão"></canvas>
+          <div class="g-cam" id="g-cam" hidden>
+            <video id="g-video" playsinline muted></video>
+            <canvas id="g-overlay"></canvas>
+          </div>
+          <div class="g-hud">
+            <span class="g-badge" id="g-state">Demonstração</span>
+            <span class="g-ring" id="g-ring" style="--p:0"><b id="g-count">0</b></span>
+          </div>
+          <p class="g-msg" id="g-msg"></p>
+        </div>
+
+        <aside class="g-side">
+          <ol class="g-steps" id="g-steps">
+            <li data-step="menu" data-i18n="g.s1"><b>Menu:</b> mostre 1 dedo por 3 s para escolher <em>Controle de volume</em> (2 dedos = outra função).</li>
+            <li data-step="confirm" data-i18n="g.s2"><b>Confirmar:</b> polegar para cima por 3 s confirma. Para baixo, cancela.</li>
+            <li data-step="volume" data-i18n="g.s3"><b>Volume:</b> mostre de 1 a 5 dedos por 3 s: 0%, 25%, 50%, 75% ou 100%.</li>
+          </ol>
+          <div class="g-vol">
+            <span data-i18n="g.vol">Volume da música</span>
+            <div class="bar"><i id="g-vol" style="width:50%"></i></div>
+            <b id="g-vol-num">50%</b>
+          </div>
+          <div class="g-buttons">
+            <button class="btn btn-primary btn-sm" type="button" id="g-start" data-i18n="g.start">Ativar câmera</button>
+            <button class="btn btn-ghost btn-sm" type="button" id="g-stop" hidden data-i18n="g.stop">Desligar</button>
+          </div>
+          <p class="hint" data-i18n="g.privacy">A câmera só liga quando você clicar. Nada é gravado ou enviado. No navegador o gesto controla uma música de exemplo; no original, o volume do Windows.</p>
+        </aside>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- PROJETOS DEV -->
+<section class="section" id="projetos">
+  <div class="wrap">
+    <p class="eyebrow reveal" data-i18n="dev.eyebrow">05 · Outros projetos</p>
+    <h2 class="h2 reveal" data-i18n="dev.title">Sites, automações e jogos</h2>
+    <div class="cards">
+      <article class="card reveal tilt">
+        <div class="card-visual shot"><img src="assets/fleury-site.jpg" alt="Página inicial do site Fleury Cosméticos" loading="lazy" width="1440" height="900"></div>
+        <span class="tag">HTML · CSS · JavaScript</span>
+        <h3 class="h3" data-i18n="fleury.title">Site · Fleury Cosméticos</h3>
+        <p data-i18n="fleury.desc">Site de uma marca de fragrâncias artesanais, com catálogo por linha de produto e contato direto pelo WhatsApp.</p>
+        <button class="link-btn" type="button" data-modal="m-fleury" data-i18n="ui.more">Ver mais →</button>
+      </article>
+
+      <article class="card reveal tilt">
+        <div class="card-visual flow" aria-hidden="true">
+          <span class="flow-node">Sheets</span><i></i><span class="flow-node hot">Apps Script</span><i></i><span class="flow-node">E-mail<br>WhatsApp</span>
+        </div>
+        <span class="tag">Google Apps Script</span>
+        <h3 class="h3" data-i18n="aviso.title">Aviso automático de datas · LEMA</h3>
+        <p data-i18n="aviso.desc">Todo dia, nos servidores do Google, confere feriados e aniversários e avisa por e-mail e WhatsApp 3 dias antes.</p>
+        <button class="link-btn" type="button" data-modal="m-aviso" data-i18n="ui.more">Ver mais →</button>
+      </article>
+
+      <article class="card reveal tilt">
+        <div class="card-visual shot shot-game"><img src="assets/jogo-carta.png" alt="Protótipo da carta do jogo mobile" loading="lazy" width="982" height="972"><span class="wip" data-i18n="jogo.wip">Em desenvolvimento</span></div>
+        <span class="tag">Figma · Game design</span>
+        <h3 class="h3" data-i18n="jogo.title">Jogo mobile de adivinhação</h3>
+        <p data-i18n="jogo.desc">Jogo de dicas para celular, com categorias como pessoa, lugar, coisa e entretenimento. Em fase de design: documento de game design e protótipos.</p>
+        <button class="link-btn" type="button" data-modal="m-jogo" data-i18n="ui.more">Ver mais →</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCIA -->
+<section class="section" id="experiencia">
+  <div class="wrap">
+    <p class="eyebrow reveal" data-i18n="exp.eyebrow">06 · Experiência</p>
+    <h2 class="h2 reveal" data-i18n="exp.title">Trajetória</h2>
+    <ol class="timeline" id="timeline">
+      <li class="tl-item reveal">
+        <span class="tl-date" data-i18n="exp.d1">Atual</span>
+        <h3 data-i18n="exp.t1">Dados e marketing · Grupo LEMA</h3>
+        <p data-i18n="exp.p1">Dashboards em Power BI, gestão de planilhas, campanhas de tráfego pago, perfil da empresa no Google e automações com Apps Script.</p>
+      </li>
+      <li class="tl-item reveal">
+        <span class="tl-date">out/2024 – 2026</span>
+        <h3 data-i18n="exp.t2">Estagiário de TI · Secretaria de Indústria e Comércio de Goiás</h3>
+        <p data-i18n="exp.p2">Substituição de mais de 200 máquinas (imagem, domínio e softwares), gestão de ativos de TI, atividades via Postman com JSON e XML, suporte remoto pelo AnyDesk e QA de sistemas com testes automatizados.</p>
+      </li>
+      <li class="tl-item reveal">
+        <span class="tl-date" data-i18n="exp.d3">Em andamento</span>
+        <h3 data-i18n="exp.t3">Sistemas de Informação · UFG</h3>
+        <p data-i18n="exp.p3">Projetos de algoritmo genético na disciplina de Inteligência Computacional (IC) e de visão computacional com controle por gestos.</p>
+      </li>
+      <li class="tl-item reveal">
+        <span class="tl-date" data-i18n="exp.d3">Em andamento</span>
+        <h3 data-i18n="exp.t4">Análise de Dados · Hashtag Treinamentos</h3>
+        <p data-i18n="exp.p4">Curso de análise de dados.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="section contact" id="contato">
+  <div class="wrap reveal">
+    <p class="eyebrow" data-i18n="contact.eyebrow">07 · Contato</p>
+    <h2 class="h2 contact-title" data-i18n="contact.title">Vamos conversar?</h2>
+    <p class="section-lead" data-i18n="contact.lead">Estou aberto a vagas em Dados/BI e desenvolvimento.</p>
+    <div class="contact-row">
+      <button class="contact-mail magnetic" type="button" id="copy-mail" data-mail="joaopedrogomide04@gmail.com">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 7.6L4 7.3V17h16V7.3l-8 5.3ZM5.2 7 12 11.4 18.8 7H5.2Z" fill="currentColor"/></svg>
+        <span>joaopedrogomide04@gmail.com</span>
+        <small id="copy-label">copiar</small>
+      </button>
+      <a class="contact-link magnetic" href="https://www.linkedin.com/in/jo%C3%A3o-pedro-gomide-6926572b9" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.5h4V21H3V9.5Zm7 0h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4V9.5Z" fill="currentColor"/></svg>
+        LinkedIn
+      </a>
+      <a class="contact-link magnetic" href="https://github.com/joaogomide1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2Z" fill="currentColor"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+  <footer class="footer wrap">
+    <span>© 2026 João Pedro Siqueira Fleury Gomide</span>
+    <a href="#inicio" data-i18n="footer.top">Voltar ao topo ↑</a>
+  </footer>
+</section>
+
+</main>
+
+<!-- MODAIS -->
+<dialog class="modal" id="m-lema">
+  <button class="modal-close" type="button" aria-label="Fechar">×</button>
+  <span class="tag tag-y">Power BI · DAX · Excel</span>
+  <h3 class="h3" data-i18n="lema.title">Dashboard financeiro · Grupo LEMA</h3>
+  <div class="modal-grid" data-i18n="lema.modal">
+    <div><h4>Problema</h4><p>Faturamento, gastos e metas ficavam em planilhas separadas. Responder perguntas simples, como "batemos a meta deste mês?", tomava tempo.</p></div>
+    <div><h4>O que eu fiz</h4><p>Modelei os dados e montei um painel único com filtros de período, faturamento e PIX por ano, gastos por categoria, KPIs, metas mensais com indicador de semáforo e recebimentos por forma de pagamento.</p></div>
+    <div><h4>Resultado</h4><p>A análise dos dados da empresa ficou centralizada e a tomada de decisão, mais fácil e rápida.</p></div>
+  </div>
+  <img class="modal-img" src="assets/lema-dashboard.png" alt="Dashboard LEMA com valores borrados" loading="lazy">
+</dialog>
+
+<dialog class="modal" id="m-etl">
+  <button class="modal-close" type="button" aria-label="Fechar">×</button>
+  <span class="tag">Python · pandas · requests · SQLite</span>
+  <h3 class="h3" data-i18n="etl.title">Pipeline ETL de clima</h3>
+  <div class="modal-grid" data-i18n="etl.modal">
+    <div><h4>Extract</h4><p>Chama a API pública Open-Meteo para São Paulo, Rio de Janeiro, Brasília, Salvador e Manaus: temperatura máxima, mínima e chuva dos próximos 7 dias.</p></div>
+    <div><h4>Transform</h4><p>Converte o JSON aninhado em tabela, renomeia colunas, corrige tipos, trata nulos, cria temperatura média e a coluna "vai chover" e remove duplicatas.</p></div>
+    <div><h4>Load</h4><p>Grava no SQLite de forma idempotente (rodar de novo substitui os dados) e valida com uma consulta SQL de média e chuva por cidade.</p></div>
+  </div>
+<pre class="code"><code><span class="k">def</span> <span class="f">transform</span>(respostas):
+    df = pd.concat(tabelas, ignore_index=<span class="k">True</span>)
+    df = df.rename(columns={<span class="s">"time"</span>: <span class="s">"data"</span>, <span class="s">"precipitation_sum"</span>: <span class="s">"chuva_mm"</span>})
+    df[<span class="s">"chuva_mm"</span>] = df[<span class="s">"chuva_mm"</span>].fillna(<span class="n">0</span>)
+    df[<span class="s">"temp_media"</span>] = ((df[<span class="s">"temp_max"</span>] + df[<span class="s">"temp_min"</span>]) / <span class="n">2</span>).round(<span class="n">1</span>)
+    df[<span class="s">"vai_chover"</span>] = df[<span class="s">"chuva_mm"</span>] &gt;= <span class="n">1.0</span>
+    <span class="k">return</span> df.drop_duplicates(subset=[<span class="s">"cidade"</span>, <span class="s">"data"</span>])</code></pre>
+</dialog>
+
+<dialog class="modal" id="m-eletro">
+  <button class="modal-close" type="button" aria-label="Fechar">×</button>
+  <span class="tag">Python · Excel · Power BI</span>
+  <h3 class="h3" data-i18n="eletro.title">Viabilidade de um eletroposto</h3>
+  <div class="modal-grid" data-i18n="eletro.modal">
+    <div><h4>Problema</h4><p>Um eletroposto recém-inaugurado precisava saber quanto fatura de verdade e em quanto tempo o investimento se paga.</p></div>
+    <div><h4>O que eu fiz</h4><p>Script em Python que agrupa as recargas por dia, calcula médias de faturamento bruto e líquido, kWh e número de recargas, projeta o mês e estima o payback. Também montei um fluxo de caixa em Excel, um painel em HTML e um guia de Power BI.</p></div>
+    <div><h4>Resultado</h4><p>Uma projeção clara de retorno do investimento, atualizável a cada semana de operação. Os valores reais não são exibidos.</p></div>
+  </div>
+</dialog>
+
+<dialog class="modal" id="m-ag">
+  <button class="modal-close" type="button" aria-label="Fechar">×</button>
+  <span class="tag tag-y" data-i18n="ag.tag">Inteligência Computacional (IC) · UFG</span>
+  <h3 class="h3" data-i18n="ag.title">Algoritmo genético · Função F6</h3>
+  <div class="modal-grid" data-i18n="ag.modal">
+    <div><h4>Codificação</h4><p>Cada indivíduo tem 44 bits: 22 para x e 22 para y, convertidos para o intervalo de −100 a 100.</p></div>
+    <div><h4>Evolução</h4><p>Seleção por roleta, cruzamento de um ponto (65%), mutação bit a bit (0,8%) e elitismo: o melhor de cada geração passa direto.</p></div>
+    <div><h4>Resultado</h4><p>F6 = 0,9628 em 40 gerações com semente 42. Em outro experimento, com 400 gerações, chegou a cerca de 0,99. O máximo é 1,0.</p></div>
+  </div>
+<pre class="code"><code><span class="k">def</span> <span class="f">funcao_f6</span>(x, y):
+    r2 = x * x + y * y
+    num = math.sin(math.sqrt(r2)) ** <span class="n">2</span> - <span class="n">0.5</span>
+    den = (<span class="n">1.0</span> + <span class="n">0.001</span> * r2) ** <span class="n">2</span>
+    <span class="k">return</span> <span class="n">0.5</span> - num / den</code></pre>
+  <div class="modal-pair">
+    <figure><img src="assets/ag-40-geracoes.png" alt="Convergência em 40 gerações" loading="lazy"><figcaption data-i18n="ag.fig1">40 gerações · 0,9628</figcaption></figure>
+    <figure><img src="assets/ag-400-geracoes.png" alt="Convergência em 400 gerações" loading="lazy"><figcaption data-i18n="ag.fig2">400 gerações · ≈ 0,99</figcaption></figure>
+  </div>
+  <p class="hint" data-i18n="ag.gui">O projeto original também tem uma interface em Tkinter para ajustar os parâmetros e ver os logs e o gráfico.</p>
+</dialog>
+
+<dialog class="modal" id="m-gestos">
+  <button class="modal-close" type="button" aria-label="Fechar">×</button>
+  <span class="tag">OpenCV · MediaPipe · pycaw</span>
+  <h3 class="h3" data-i18n="g.title">Controle de volume por gestos</h3>
+  <div class="modal-grid" data-i18n="g.modal">
+    <div><h4>Detecção</h4><p>A webcam é lida com OpenCV e o MediaPipe Hands encontra 21 pontos da mão. Um dedo conta como levantado quando a ponta está acima da articulação do meio.</p></div>
+    <div><h4>Menu por estados</h4><p>Segurar a mesma quantidade de dedos por 5 segundos escolhe a opção. O polegar para cima confirma e para baixo cancela, evitando ativações por engano.</p></div>
+    <div><h4>Ação</h4><p>No modo volume, 1 a 5 dedos definem 0% a 100% do volume do Windows, pela biblioteca pycaw.</p></div>
+  </div>
+<pre class="code"><code><span class="k">def</span> <span class="f">dedos_levantados</span>(hand_landmarks):
+    dedos = []
+    <span class="k">for</span> i, id <span class="k">in</span> enumerate(dedo_ids):
+        <span class="k">if</span> i == <span class="n">0</span>:  <span class="c"># polegar: eixo x</span>
+            dedos.append(<span class="n">1</span> <span class="k">if</span> lm[id].x &lt; lm[id - <span class="n">2</span>].x <span class="k">else</span> <span class="n">0</span>)
+        <span class="k">else</span>:       <span class="c"># outros dedos: eixo y</span>
+            dedos.append(<span class="n">1</span> <span class="k">if</span> lm[id].y &lt; lm[id - <span class="n">2</span>].y <span class="k">else</span> <span class="n">0</span>)
+    <span class="k">return</span> dedos</code></pre>
+</dialog>
+
+<dialog class="modal" id="m-fleury">
+  <button class="modal-close" type="button" aria-label="Fechar">×</button>
+  <span class="tag">HTML · CSS · JavaScript</span>
+  <h3 class="h3" data-i18n="fleury.title">Site · Fleury Cosméticos</h3>
+  <div class="modal-grid" data-i18n="fleury.modal">
+    <div><h4>Objetivo</h4><p>Dar presença on-line a uma marca de fragrâncias e body splashes artesanais e levar o cliente direto para a conversa de compra.</p></div>
+    <div><h4>O que tem</h4><p>Página inicial com a identidade da marca, catálogo por linha (body splash, óleo, hidratante, sabonete líquido e gloss), seção sobre a marca e contato.</p></div>
+    <div><h4>Detalhes</h4><p>Layout responsivo, navegação por abas no catálogo e botão fixo de WhatsApp.</p></div>
+  </div>
+  <img class="modal-img" src="assets/fleury-site.jpg" alt="Site Fleury Cosméticos" loading="lazy">
+</dialog>
+
+<dialog class="modal" id="m-aviso">
+  <button class="modal-close" type="button" aria-label="Fechar">×</button>
+  <span class="tag">Google Apps Script · Google Sheets</span>
+  <h3 class="h3" data-i18n="aviso.title">Aviso automático de datas · LEMA</h3>
+  <div class="modal-grid" data-i18n="aviso.modal">
+    <div><h4>Problema</h4><p>Feriados, datas comemorativas e aniversários da equipe passavam sem que ninguém lembrasse a tempo.</p></div>
+    <div><h4>O que eu fiz</h4><p>Um script que roda sozinho todo dia nos servidores do Google, lê duas planilhas e junta os eventos dos próximos 3 dias.</p></div>
+    <div><h4>Resultado</h4><p>Aviso automático por e-mail e WhatsApp, sem custo e sem depender de um computador ligado.</p></div>
+  </div>
+<pre class="code"><code><span class="k">function</span> <span class="f">verificarDatas</span>() {
+  <span class="k">var</span> hoje = <span class="k">new</span> Date();
+  hoje.setHours(<span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span>);
+  <span class="k">var</span> avisos = checarFeriados(hoje).concat(checarAniversarios(hoje));
+  <span class="k">if</span> (avisos.length === <span class="n">0</span>) <span class="k">return</span>;
+  MailApp.sendEmail({ to: EMAIL_DESTINO, subject: <span class="s">"Lema — "</span> + avisos.length + <span class="s">" evento(s) chegando"</span>, body: montarCorpoEmail(avisos) });
+}</code></pre>
+</dialog>
+
+<dialog class="modal" id="m-jogo">
+  <button class="modal-close" type="button" aria-label="Fechar">×</button>
+  <span class="tag">Figma · Game design</span>
+  <h3 class="h3" data-i18n="jogo.title">Jogo mobile de adivinhação</h3>
+  <div class="modal-grid" data-i18n="jogo.modal">
+    <div><h4>Conceito</h4><p>Um celular faz o papel da carta e passa de mão em mão. Cada carta tem 20 dicas numeradas, e quem acerta com menos dicas faz mais pontos (20 − dicas usadas).</p></div>
+    <div><h4>Regras próprias</h4><p>Dicas especiais (avançar, voltar, perder a vez), cronômetro por dica, sessões que guardam jogadores e placar e uma nova categoria de Entretenimento: filmes, séries, animes e jogos.</p></div>
+    <div><h4>Status</h4><p>Em design: documento de game design, protótipo no Figma e protótipo clicável da carta. Ainda sem código do app.</p></div>
+  </div>
+  <img class="modal-img" src="assets/jogo-carta.png" alt="Protótipo da carta" loading="lazy">
+</dialog>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+<script src="js/ag-f6.js"></script>
+<script src="js/gestos.js"></script>
+</body>
+</html>
